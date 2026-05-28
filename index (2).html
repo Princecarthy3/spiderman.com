@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man Community | Sign Up</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)),
+                url("4053972724e06696425c31dd15f9ea34.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #ff2e63;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #dddddd;
+            font-size: 1.1rem;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+        }
+
+        .card h2 {
+            margin-bottom: 20px;
+            color: #00d4ff;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: 500;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            outline: none;
+            background: rgba(255,255,255,0.12);
+            color: white;
+            font-size: 15px;
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #cccccc;
+        }
+
+        select {
+            color: white;
+        }
+
+        option {
+            color: black;
+        }
+
+        .gender {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .gender label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #ff2e63, #ff5733);
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(255, 46, 99, 0.5);
+        }
+
+        .about p {
+            line-height: 1.8;
+            color: #e5e5e5;
+            margin-bottom: 20px;
+        }
+
+        .about ul {
+            padding-left: 20px;
+            line-height: 1.9;
+        }
+
+        .contact {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .contact a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .contact a:hover {
+            color: #ff2e63;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #bbbbbb;
+        }
+
+        @media(max-width: 900px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <section class="hero">
+            <h1>WELCOME TO THE SPIDER-MAN COMMUNITY</h1>
+            <p>Join the ultimate Spider-Man fan website and become part of the web.</p>
+        </section>
+
+        <section class="main-content">
+
+            <div class="card">
+                <h2>Create Your Account</h2>
+
+                <form>
+
+                    <label for="fname">First Name</label>
+                    <input id="fname" type="text" placeholder="Enter your first name" required>
+
+                    <label for="lname">Last Name</label>
+                    <input id="lname" type="text" placeholder="Enter your last name" required>
+
+                    <label>Gender</label>
+                    <div class="gender">
+                        <label>
+                            <input type="radio" name="gender"> Male
+                        </label>
+
+                        <label>
+                            <input type="radio" name="gender"> Female
+                        </label>
+                    </div>
+
+                    <label for="email">Email Address</label>
+                    <input id="email" type="email" placeholder="Enter your email" required>
+
+                    <label for="pass">Password</label>
+                    <input id="pass" type="password" placeholder="Enter your password" minlength="8" required>
+
+                    <label>
+                        <input type="checkbox" onclick="togglePassword()">
+                        Show Password
+                    </label>
+
+                    <label for="tel">Phone Number</label>
+                    <input id="tel" type="tel" placeholder="Enter your phone number">
+
+                    <label for="country">Country</label>
+                    <select id="country">
+                        <optgroup label="Africa">
+                            <option>Ghana</option>
+                            <option>Togo</option>
+                            <option>Nigeria</option>
+                            <option>South Africa</option>
+                        </optgroup>
+
+                        <optgroup label="Europe">
+                            <option>Spain</option>
+                            <option>France</option>
+                            <option>Germany</option>
+                            <option>England</option>
+                        </optgroup>
+                    </select>
+
+                    <label for="date">Registration Date</label>
+                    <input id="date" type="date">
+
+                    <label for="file">Upload Profile Image</label>
+                    <input id="file" type="file">
+
+                    <input class="submit-btn" type="submit" value="Join The Spider-Verse">
+
+                </form>
+            </div>
+
+            <div class="card about">
+                <h2>About The Author</h2>
+
+                <p>
+                    Prince Maccarthy is a passionate developer known for creating creative and engaging web projects.
+                    His dedication to technology and innovation inspires upcoming developers to explore the world of web development.
+                </p>
+
+                <p>
+                    Through his projects, he aims to make learning programming fun, interactive, and beginner-friendly.
+                </p>
+
+                <h3 style="margin-bottom: 15px; color:#ff2e63;">Achievements</h3>
+
+                <ul>
+                    <li>Developed multiple beginner-friendly web projects.</li>
+                    <li>Inspired students to learn HTML, CSS, and JavaScript.</li>
+                    <li>Created engaging user interfaces and modern website designs.</li>
+                    <li>Promoted creativity in technology and education.</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <section class="contact">
+            <a href="mailto:princemaccarthy006@gmail.com">📧 princemaccarthy006@gmail.com</a>
+            <a href="tel:+233536918893">📞 +233 53 691 8893</a>
+            <a href="https://web.whatsapp.com/">💬 WhatsApp</a>
+            <a href="mysecondprogram.html">➡ Go To Second Page</a>
+        </section>
+
+        <div class="footer">
+            <p>© 2026 Spider-Man Community | Designed by Prince Maccarthy</p>
+        </div>
+
+    </div>
+
+    <script>
+        function togglePassword() {
+            let x = document.getElementById("pass");
+
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+
+</body>
+</html>
+
